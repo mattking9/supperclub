@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="mySupperClub.GroupList">
+
+    <TabbedPage.Children>
+        <ContentPage Title="Groups">
+
+            <StackLayout Orientation="Vertical" VerticalOptions="Start">
+                <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" HorizontalOptions="CenterAndExpand" />
+
+                <ListView ItemsSource="{Binding Groups}" ItemTapped="Group_Tapped">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}" Detail="{Binding Name}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage.Children>
+
+</TabbedPage>
