@@ -26,16 +26,6 @@ namespace mySupperClub.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Auth._MobileServices.Resource.Animation.slide_in_right = global::mySupperClub.Droid.Resource.Animation.slide_in_right;
-			global::Xamarin.Auth._MobileServices.Resource.Animation.slide_out_left = global::mySupperClub.Droid.Resource.Animation.slide_out_left;
-			global::Xamarin.Auth._MobileServices.Resource.Drawable.ic_arrow_back = global::mySupperClub.Droid.Resource.Drawable.ic_arrow_back;
-			global::Xamarin.Auth._MobileServices.Resource.Id.webview = global::mySupperClub.Droid.Resource.Id.webview;
-			global::Xamarin.Auth._MobileServices.Resource.Layout.activity_webview = global::mySupperClub.Droid.Resource.Layout.activity_webview;
-			global::Xamarin.Auth._MobileServices.Resource.String.ApplicationName = global::mySupperClub.Droid.Resource.String.ApplicationName;
-			global::Xamarin.Auth._MobileServices.Resource.String.Hello = global::mySupperClub.Droid.Resource.String.Hello;
-			global::Xamarin.Auth._MobileServices.Resource.String.title_activity_webview = global::mySupperClub.Droid.Resource.String.title_activity_webview;
-			global::PCLCrypto.Resource.String.ApplicationName = global::mySupperClub.Droid.Resource.String.ApplicationName;
-			global::PCLCrypto.Resource.String.Hello = global::mySupperClub.Droid.Resource.String.Hello;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::mySupperClub.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2950,12 +2940,6 @@ namespace mySupperClub.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f080027
-			public const int ApplicationName = 2131230759;
-			
-			// aapt resource value: 0x7f080026
-			public const int Hello = 2131230758;
-			
 			// aapt resource value: 0x7f08000f
 			public const int abc_action_bar_home_description = 2131230735;
 			
@@ -3070,8 +3054,8 @@ namespace mySupperClub.Droid
 			// aapt resource value: 0x7f080022
 			public const int status_bar_notification_info_overflow = 2131230754;
 			
-			// aapt resource value: 0x7f080028
-			public const int title_activity_webview = 2131230760;
+			// aapt resource value: 0x7f080026
+			public const int title_activity_webview = 2131230758;
 			
 			static String()
 			{

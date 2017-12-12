@@ -1,19 +1,22 @@
 {
   "version": 3,
   "targets": {
-    "MonoAndroid,Version=v7.1": {
+    "MonoAndroid,Version=v6.0": {
       "Microsoft.Azure.Mobile.Client/4.0.1": {
         "type": "package",
         "dependencies": {
+          "NETStandard.Library": "1.6.1",
           "Newtonsoft.Json": "9.0.1",
-          "PCLCrypto": "2.0.147",
-          "Xamarin.Android.Support.CustomTabs": "23.3.0"
+          "System.IO.IsolatedStorage": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Security.Cryptography.Algorithms": "4.3.0"
         },
         "compile": {
-          "lib/monoandroid70/Microsoft.Azure.Mobile.Client.dll": {}
+          "lib/netstandard1.4/Microsoft.Azure.Mobile.Client.dll": {}
         },
         "runtime": {
-          "lib/monoandroid70/Microsoft.Azure.Mobile.Client.dll": {}
+          "lib/netstandard1.4/Microsoft.Azure.Mobile.Client.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -90,66 +93,6 @@
         },
         "runtime": {
           "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
-        }
-      },
-      "PCLCrypto/2.0.147": {
-        "type": "package",
-        "dependencies": {
-          "PInvoke.NCrypt": "0.3.2",
-          "Validation": "2.2.8"
-        },
-        "compile": {
-          "lib/MonoAndroid23/PCLCrypto.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid23/PCLCrypto.dll": {}
-        }
-      },
-      "PInvoke.BCrypt/0.3.2": {
-        "type": "package",
-        "dependencies": {
-          "PInvoke.Kernel32": "0.3.2",
-          "PInvoke.Windows.Core": "0.3.2"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll": {}
-        }
-      },
-      "PInvoke.Kernel32/0.3.2": {
-        "type": "package",
-        "dependencies": {
-          "PInvoke.Windows.Core": "0.3.2"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll": {}
-        }
-      },
-      "PInvoke.NCrypt/0.3.2": {
-        "type": "package",
-        "dependencies": {
-          "PInvoke.BCrypt": "0.3.2",
-          "PInvoke.Windows.Core": "0.3.2"
-        },
-        "compile": {
-          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll": {}
-        }
-      },
-      "PInvoke.Windows.Core/0.3.2": {
-        "type": "package",
-        "compile": {
-          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
-        },
-        "runtime": {
-          "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -291,6 +234,15 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
+      "System.IO.IsolatedStorage/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/MonoAndroid10/_._": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/_._": {}
+        }
+      },
       "System.Linq/4.3.0": {
         "type": "package",
         "compile": {
@@ -307,6 +259,15 @@
         },
         "runtime": {
           "lib/MonoAndroid10/_._": {}
+        }
+      },
+      "System.Linq.Queryable/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/monoandroid10/_._": {}
+        },
+        "runtime": {
+          "lib/monoandroid10/_._": {}
         }
       },
       "System.Net.Http/4.3.0": {
@@ -600,15 +561,6 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
-      "Validation/2.2.8": {
-        "type": "package",
-        "compile": {
-          "lib/dotnet/Validation.dll": {}
-        },
-        "runtime": {
-          "lib/dotnet/Validation.dll": {}
-        }
-      },
       "Xamarin.Android.Support.Animated.Vector.Drawable/23.3.0": {
         "type": "package",
         "dependencies": {
@@ -620,18 +572,6 @@
         },
         "runtime": {
           "lib/MonoAndroid403/Xamarin.Android.Support.Animated.Vector.Drawable.dll": {}
-        }
-      },
-      "Xamarin.Android.Support.CustomTabs/23.3.0": {
-        "type": "package",
-        "dependencies": {
-          "Xamarin.Android.Support.v4": "[23.3.0]"
-        },
-        "compile": {
-          "lib/MonoAndroid403/Xamarin.Android.Support.CustomTabs.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid403/Xamarin.Android.Support.CustomTabs.dll": {}
         }
       },
       "Xamarin.Android.Support.Design/23.3.0": {
@@ -723,11 +663,11 @@
       "Xamarin.Forms/2.3.4.247": {
         "type": "package",
         "dependencies": {
-          "Xamarin.Android.Support.Design": "23.3.0",
-          "Xamarin.Android.Support.v4": "23.3.0",
-          "Xamarin.Android.Support.v7.AppCompat": "23.3.0",
-          "Xamarin.Android.Support.v7.CardView": "23.3.0",
-          "Xamarin.Android.Support.v7.MediaRouter": "23.3.0"
+          "Xamarin.Android.Support.Design": "[23.3.0]",
+          "Xamarin.Android.Support.v4": "[23.3.0]",
+          "Xamarin.Android.Support.v7.AppCompat": "[23.3.0]",
+          "Xamarin.Android.Support.v7.CardView": "[23.3.0]",
+          "Xamarin.Android.Support.v7.MediaRouter": "[23.3.0]"
         },
         "compile": {
           "lib/MonoAndroid10/FormsViewGroup.dll": {},
@@ -861,87 +801,6 @@
         "newtonsoft.json.9.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "tools/install.ps1"
-      ]
-    },
-    "PCLCrypto/2.0.147": {
-      "sha512": "OFNDBjhP+qPukqB8PiGbWDo70gHsEzSKupL47JisjYFQaGwlPPCnN8ah59QCzIvsg9IUr2AecGKXF3ONpyFL9g==",
-      "type": "package",
-      "path": "pclcrypto/2.0.147",
-      "files": [
-        "lib/MonoAndroid23/PCLCrypto.dll",
-        "lib/MonoAndroid23/PCLCrypto.xml",
-        "lib/MonoTouch10/PCLCrypto.dll",
-        "lib/MonoTouch10/PCLCrypto.xml",
-        "lib/net45/PCLCrypto.dll",
-        "lib/net45/PCLCrypto.xml",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/PCLCrypto.dll",
-        "lib/portable-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/PCLCrypto.xml",
-        "lib/portable-win81+wpa81/PCLCrypto.dll",
-        "lib/portable-win81+wpa81/PCLCrypto.xml",
-        "lib/wp80/PCLCrypto.dll",
-        "lib/wp80/PCLCrypto.xml",
-        "lib/xamarinios10/PCLCrypto.dll",
-        "lib/xamarinios10/PCLCrypto.xml",
-        "pclcrypto.2.0.147.nupkg.sha512",
-        "pclcrypto.nuspec"
-      ]
-    },
-    "PInvoke.BCrypt/0.3.2": {
-      "sha512": "6nSjPx88F+dcQgxfbM/lkYhi/zQWxwBcGAS3de/Q7YmPr5QdLNv5ZMk2UEFpMQhlFNya4TdUy5i3HKA12uMa7Q==",
-      "type": "package",
-      "path": "pinvoke.bcrypt/0.3.2",
-      "files": [
-        "lib/net40/PInvoke.BCrypt.dll",
-        "lib/net40/PInvoke.BCrypt.xml",
-        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll",
-        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.xml",
-        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.dll",
-        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.BCrypt.xml",
-        "pinvoke.bcrypt.0.3.2.nupkg.sha512",
-        "pinvoke.bcrypt.nuspec"
-      ]
-    },
-    "PInvoke.Kernel32/0.3.2": {
-      "sha512": "zkd5Vc5AQ9B489GMNlmd0wdKnRoLl1B/TnouwcjtaqWbDJ17TQSvBRnV7xjVEpBHQtL/248EaUTcDprJe9bZMA==",
-      "type": "package",
-      "path": "pinvoke.kernel32/0.3.2",
-      "files": [
-        "lib/net40/PInvoke.Kernel32.dll",
-        "lib/net40/PInvoke.Kernel32.xml",
-        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll",
-        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.xml",
-        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.dll",
-        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Kernel32.xml",
-        "pinvoke.kernel32.0.3.2.nupkg.sha512",
-        "pinvoke.kernel32.nuspec"
-      ]
-    },
-    "PInvoke.NCrypt/0.3.2": {
-      "sha512": "s7SIBXlr3qolZaM5mGEXG2sKBY4yFVHTWBlwhRC93le08Aj+n/IaFVnB9LBFv6mpCCivXdzad+9EX6HHds4PyQ==",
-      "type": "package",
-      "path": "pinvoke.ncrypt/0.3.2",
-      "files": [
-        "lib/net40/PInvoke.NCrypt.dll",
-        "lib/net40/PInvoke.NCrypt.xml",
-        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll",
-        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.xml",
-        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.dll",
-        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.NCrypt.xml",
-        "pinvoke.ncrypt.0.3.2.nupkg.sha512",
-        "pinvoke.ncrypt.nuspec"
-      ]
-    },
-    "PInvoke.Windows.Core/0.3.2": {
-      "sha512": "cLG8L2mBqeM6mwKxYg34uZnW5A4cAqyWY4nh+ogxon6BOPLcuQ2QSK/b1IKduUIQg6mDgf06rZUVbuVVPi9+fg==",
-      "type": "package",
-      "path": "pinvoke.windows.core/0.3.2",
-      "files": [
-        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll",
-        "lib/portable-net40+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.xml",
-        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.dll",
-        "lib/portable-net45+win+wpa81+MonoAndroid10+xamarinios10+MonoTouch10/PInvoke.Windows.Core.xml",
-        "pinvoke.windows.core.0.3.2.nupkg.sha512",
-        "pinvoke.windows.core.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -1734,6 +1593,41 @@
         "system.io.filesystem.primitives.nuspec"
       ]
     },
+    "System.IO.IsolatedStorage/4.3.0": {
+      "sha512": "GFHf35OujP5QgvqCeo4vm+j/H0QGInF8CVVD/yHrpZGMyZmKlHiWhS6+7xFeqaFktdyfxe5nS3vD1zcdl1CCTg==",
+      "type": "package",
+      "path": "system.io.isolatedstorage/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/netcore50/System.IO.IsolatedStorage.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.4/System.IO.IsolatedStorage.dll",
+        "ref/netstandard1.4/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/de/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/es/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/fr/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/it/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/ja/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/ko/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/ru/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/zh-hans/System.IO.IsolatedStorage.xml",
+        "ref/netstandard1.4/zh-hant/System.IO.IsolatedStorage.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.io.isolatedstorage.4.3.0.nupkg.sha512",
+        "system.io.isolatedstorage.nuspec"
+      ]
+    },
     "System.Linq/4.3.0": {
       "sha512": "5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "type": "package",
@@ -1884,6 +1778,63 @@
         "runtimes/aot/lib/netcore50/System.Linq.Expressions.dll",
         "system.linq.expressions.4.3.0.nupkg.sha512",
         "system.linq.expressions.nuspec"
+      ]
+    },
+    "System.Linq.Queryable/4.3.0": {
+      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
+      "type": "package",
+      "path": "system.linq.queryable/4.3.0",
+      "files": [
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/monoandroid10/_._",
+        "lib/monotouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Linq.Queryable.dll",
+        "lib/netstandard1.3/System.Linq.Queryable.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/monoandroid10/_._",
+        "ref/monotouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Linq.Queryable.dll",
+        "ref/netcore50/System.Linq.Queryable.xml",
+        "ref/netcore50/de/System.Linq.Queryable.xml",
+        "ref/netcore50/es/System.Linq.Queryable.xml",
+        "ref/netcore50/fr/System.Linq.Queryable.xml",
+        "ref/netcore50/it/System.Linq.Queryable.xml",
+        "ref/netcore50/ja/System.Linq.Queryable.xml",
+        "ref/netcore50/ko/System.Linq.Queryable.xml",
+        "ref/netcore50/ru/System.Linq.Queryable.xml",
+        "ref/netcore50/zh-hans/System.Linq.Queryable.xml",
+        "ref/netcore50/zh-hant/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/System.Linq.Queryable.dll",
+        "ref/netstandard1.0/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/de/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/es/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/fr/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/it/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/ja/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/ko/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/ru/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/zh-hans/System.Linq.Queryable.xml",
+        "ref/netstandard1.0/zh-hant/System.Linq.Queryable.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.linq.queryable.4.3.0.nupkg.sha512",
+        "system.linq.queryable.nuspec"
       ]
     },
     "System.Net.Http/4.3.0": {
@@ -3474,28 +3425,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Validation/2.2.8": {
-      "sha512": "DMNc7JhPlgRwnR+NNb+ldoluObL+RBw96aMoiZae/Looa4vgaAnIysmle/bV2OKqDNW9oUBDckPyfa2+sX6JdA==",
-      "type": "package",
-      "path": "validation/2.2.8",
-      "files": [
-        "README.md",
-        "lib/dotnet/Validation.dll",
-        "lib/dotnet/Validation.xml",
-        "lib/portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Validation.dll",
-        "lib/portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Validation.xml",
-        "lib/portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Validation.dll",
-        "lib/portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10/Validation.xml",
-        "tools/2013/RequiresNotNull.snippet",
-        "tools/2013/RequiresNotNullOrEmpty.snippet",
-        "tools/2015/RequiresNotNull.snippet",
-        "tools/2015/RequiresNotNullOrEmpty.snippet",
-        "tools/install_snippets.cmd",
-        "tools/uninstall_snippets.cmd",
-        "validation.2.2.8.nupkg.sha512",
-        "validation.nuspec"
-      ]
-    },
     "Xamarin.Android.Support.Animated.Vector.Drawable/23.3.0": {
       "sha512": "qCN7bgA3BpzVybYV5jJa0wQDDYqdomZ7va4gdeyXNAtjEVFPDdKdS8wrD1HuGsQfxShLPcsDFIKd1Z4birTq8g==",
       "type": "package",
@@ -3504,16 +3433,6 @@
         "lib/MonoAndroid403/Xamarin.Android.Support.Animated.Vector.Drawable.dll",
         "xamarin.android.support.animated.vector.drawable.23.3.0.nupkg.sha512",
         "xamarin.android.support.animated.vector.drawable.nuspec"
-      ]
-    },
-    "Xamarin.Android.Support.CustomTabs/23.3.0": {
-      "sha512": "OQ/Uj2FDEWi8CD2AXXeNOOvy47z2QHywdGsMnGtf5n+nXATZvpg9+Xx/p1JLefccDM4Q0KRC0gO4QpQkDyuZ8A==",
-      "type": "package",
-      "path": "xamarin.android.support.customtabs/23.3.0",
-      "files": [
-        "lib/MonoAndroid403/Xamarin.Android.Support.CustomTabs.dll",
-        "xamarin.android.support.customtabs.23.3.0.nupkg.sha512",
-        "xamarin.android.support.customtabs.nuspec"
       ]
     },
     "Xamarin.Android.Support.Design/23.3.0": {
@@ -3762,19 +3681,19 @@
       "Xamarin.Android.Support.v7.MediaRouter >= 23.3.0",
       "Xamarin.Forms >= 2.3.4.247"
     ],
-    "MonoAndroid,Version=v7.1": []
+    "MonoAndroid,Version=v6.0": []
   },
   "packageFolders": {
     "C:\\Users\\U6028865\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\nonTFSProjects\\mySupperClub\\app\\Droid\\mySupperClub.Droid.csproj",
+      "projectUniqueName": "C:\\git\\repos\\supperclub\\Droid\\mySupperClub.Droid.csproj",
       "projectName": "mySupperClub.Droid",
-      "projectPath": "C:\\nonTFSProjects\\mySupperClub\\app\\Droid\\mySupperClub.Droid.csproj",
-      "projectJsonPath": "C:\\nonTFSProjects\\mySupperClub\\app\\Droid\\project.json",
+      "projectPath": "C:\\git\\repos\\supperclub\\Droid\\mySupperClub.Droid.csproj",
+      "projectJsonPath": "C:\\git\\repos\\supperclub\\Droid\\project.json",
       "packagesPath": "C:\\Users\\U6028865\\.nuget\\packages\\",
-      "outputPath": "C:\\nonTFSProjects\\mySupperClub\\app\\Droid\\obj\\",
+      "outputPath": "C:\\git\\repos\\supperclub\\Droid\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\U6028865\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3786,10 +3705,10 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "monoandroid71": {
+        "monoandroid60": {
           "projectReferences": {
-            "C:\\nonTFSProjects\\mySupperClub\\app\\mySupperClub\\mySupperClub.csproj": {
-              "projectPath": "C:\\nonTFSProjects\\mySupperClub\\app\\mySupperClub\\mySupperClub.csproj"
+            "C:\\git\\repos\\supperclub\\mySupperClub\\mySupperClub.csproj": {
+              "projectPath": "C:\\git\\repos\\supperclub\\mySupperClub\\mySupperClub.csproj"
             }
           }
         }
@@ -3805,7 +3724,7 @@
       "Xamarin.Android.Support.v7.MediaRouter": "23.3.0"
     },
     "frameworks": {
-      "monoandroid71": {}
+      "monoandroid60": {}
     }
   }
 }

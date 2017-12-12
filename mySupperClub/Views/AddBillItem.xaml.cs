@@ -1,46 +1,31 @@
 ﻿using mySupperClub.ViewModels;
 using System;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace mySupperClub
 {
-    public partial class BillItemList : ContentPage
+    public partial class AddBillItem
     {
-        private Event eventItem;
 
-        public BillItemList()
+        public AddBillItem()
         {
             InitializeComponent();
         }
 
-        public BillItemList(Event selectedEventItem) : this()
+        public AddBillItem(Event selectedEvent, ObservableCollection<BillItem> billItems) : this()
         {
-            this.BindingContext = new BillItemListViewModel(selectedEventItem, this.Navigation);
+            this.BindingContext = new AddBillItemViewModel(selectedEvent, billItems, this.Navigation);
         }
 
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            ((BillItemListViewModel)BindingContext).Load();
+            ((AddBillItemViewModel)BindingContext).Load();
         }
 
-        // Data methods
-        async Task AddItem(BillItem item)
-        {
-            //await App.GetSupperClubService().AddBillItem(item);
-            //todoList.ItemsSource = await App.GetSupperClubService().GetBillItems(eventItem.Id);
-        }
-
-
-        public async void OnAdd(object sender, EventArgs e)
-        {
-           // var todo = new BillItem { LocationName = newItemName.Text, EventId = eventItem.Id };
-            //await AddItem(todo);
-
-            //newItemName.Text = string.Empty;
-            //newItemName.Unfocus();
-        }
+        
 
         // Event handlers
         public async void OnSelected(object sender, SelectedItemChangedEventArgs e)
@@ -101,7 +86,7 @@ namespace mySupperClub
 
         private async Task RefreshItems()
         {
-            ((BillItemListViewModel)BindingContext).Load();
+            ((AddBillItemViewModel)BindingContext).Load();
         }
 
         

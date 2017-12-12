@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace mySupperClub
 {
@@ -13,6 +14,8 @@ namespace mySupperClub
         public DateTime EventDate { get; set; }
 
         public string GroupId { get; set; }
+
+        public ICollection<BillItem> BillItems { get; set; }
 
         [Version]
         public string Version { get; set; }

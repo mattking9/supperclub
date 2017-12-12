@@ -44,6 +44,13 @@ namespace mySupperClub
             return await table.ReadAsync(query);
         }
 
+        //public async Task<IEnumerable<BillItem>> GetMyBillItems(string eventId, string userId)
+        //{
+        //    var table = azClient.GetTable<BillItem>();
+        //    var query = table.Where(bi => bi.EventId == eventId && bi.UserId == userId);
+        //    return await table.ReadAsync(query);
+        //}
+
         public async Task<BillItem> AddBillItem(BillItem newBillItem)
         {
             var table = azClient.GetTable<BillItem>();

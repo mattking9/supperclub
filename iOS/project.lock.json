@@ -4330,12 +4330,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\nonTFSProjects\\mySupperClub\\app\\iOS\\mySupperClub.iOS.csproj",
+      "projectUniqueName": "C:\\git\\repos\\supperclub\\iOS\\mySupperClub.iOS.csproj",
       "projectName": "mySupperClub.iOS",
-      "projectPath": "C:\\nonTFSProjects\\mySupperClub\\app\\iOS\\mySupperClub.iOS.csproj",
-      "projectJsonPath": "C:\\nonTFSProjects\\mySupperClub\\app\\iOS\\project.json",
+      "projectPath": "C:\\git\\repos\\supperclub\\iOS\\mySupperClub.iOS.csproj",
+      "projectJsonPath": "C:\\git\\repos\\supperclub\\iOS\\project.json",
       "packagesPath": "C:\\Users\\U6028865\\.nuget\\packages\\",
-      "outputPath": "C:\\nonTFSProjects\\mySupperClub\\app\\iOS\\obj\\",
+      "outputPath": "C:\\git\\repos\\supperclub\\iOS\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\U6028865\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4349,8 +4349,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\nonTFSProjects\\mySupperClub\\app\\mySupperClub\\mySupperClub.csproj": {
-              "projectPath": "C:\\nonTFSProjects\\mySupperClub\\app\\mySupperClub\\mySupperClub.csproj"
+            "C:\\git\\repos\\supperclub\\mySupperClub\\mySupperClub.csproj": {
+              "projectPath": "C:\\git\\repos\\supperclub\\mySupperClub\\mySupperClub.csproj"
             }
           }
         }

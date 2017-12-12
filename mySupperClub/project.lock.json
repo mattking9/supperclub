@@ -4583,12 +4583,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\nonTFSProjects\\mySupperClub\\app\\mySupperClub\\mySupperClub.csproj",
+      "projectUniqueName": "C:\\git\\repos\\supperclub\\mySupperClub\\mySupperClub.csproj",
       "projectName": "mySupperClub",
-      "projectPath": "C:\\nonTFSProjects\\mySupperClub\\app\\mySupperClub\\mySupperClub.csproj",
-      "projectJsonPath": "C:\\nonTFSProjects\\mySupperClub\\app\\mySupperClub\\project.json",
+      "projectPath": "C:\\git\\repos\\supperclub\\mySupperClub\\mySupperClub.csproj",
+      "projectJsonPath": "C:\\git\\repos\\supperclub\\mySupperClub\\project.json",
       "packagesPath": "C:\\Users\\U6028865\\.nuget\\packages\\",
-      "outputPath": "C:\\nonTFSProjects\\mySupperClub\\app\\mySupperClub\\obj\\",
+      "outputPath": "C:\\git\\repos\\supperclub\\mySupperClub\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\U6028865\\AppData\\Roaming\\NuGet\\NuGet.Config",

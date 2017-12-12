@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="mySupperClub.AddBillItem"
+				Title="Add Item">
+        
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Save" Priority="1" Order="Primary" Command="{Binding SaveItemCommand}" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <OnPlatform.WinPhone>/Toolkit.Content/ApplicationBar.Add.png</OnPlatform.WinPhone>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <TableView Intent="Form">
+        <TableView.Root>
+            <TableRoot>
+                <TableSection Title="Item Details">
+                    <EntryCell Label="Name:" Text="{Binding Name, Mode=TwoWay}"></EntryCell>
+                    <EntryCell Keyboard="Numeric" Label="Cost: £" Text="{Binding Cost, Mode=TwoWay}"></EntryCell>
+                </TableSection>
+
+            </TableRoot>
+        </TableView.Root>
+    </TableView>
+</ContentPage>

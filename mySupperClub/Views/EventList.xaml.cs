@@ -32,7 +32,7 @@ namespace mySupperClub
         {
             Event eventItem = e.Item as Event;
             Navigation.PushAsync(
-                new BillItemList(eventItem));
+                new EventDetails(eventItem));
         }
     }
 }

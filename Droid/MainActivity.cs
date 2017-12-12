@@ -15,7 +15,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace mySupperClub.Droid
 {
-	[Activity (Label = "mySupperClub.Droid",
+	[Activity (Label = "The Supper Club",
 		Icon = "@drawable/icon",
 		MainLauncher = true,
 		ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
@@ -25,9 +25,6 @@ namespace mySupperClub.Droid
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			// Initialize Azure Mobile Apps
-			CurrentPlatform.Init();
 
 			// Initialize Xamarin Forms
 			Forms.Init (this, bundle);

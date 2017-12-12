@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="mySupperClub.EventDetails"
+				Title="{Binding Event.LocationName}">
+
+    <TabbedPage.Children>
+        <ContentPage Title="Event Details">
+            <TableView Intent="Form">
+                <TableView.Root>
+                    <TableRoot>
+                        <TableSection Title="Item Details">
+                            <TextCell Text="Location:" Detail="{Binding Event.LocationName}"></TextCell>
+                            <TextCell Text="Date:" Detail="{Binding Event.EventDate, StringFormat='{0:dd/MM/yy}'}"></TextCell>
+                        </TableSection>
+                        <!--<TableSection Title="Diners">
+                            <ListView ItemsSource="{Binding Diners}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <ViewCell.View>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                                    <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" >
+                                                        <Label Text="Matt King" Font="Medium" />
+                                                    </StackLayout>
+                                                    <StackLayout Orientation="Vertical" WidthRequest="150" HorizontalOptions="End" >
+                                                        <Label Text="£23.50" />
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </ViewCell.View>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </TableSection>-->
+                        <TableSection Title="Bill">
+                            <TextCell Text="Total:" Detail="{Binding Total, StringFormat='{0:c}'}"></TextCell>
+                            <TextCell Text="Tip:" Detail="£0.00"></TextCell>
+                            <TextCell Text="Total With Tip:" Detail="{Binding Total, StringFormat='{0:c}'}"></TextCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView.Root>
+            </TableView>
+        </ContentPage>
+        <ContentPage Title="My Order">
+            <ContentPage.ToolbarItems>
+                <ToolbarItem Name="Add" Priority="1" Order="Primary" Command="{Binding AddItemCommand}" >
+                    <ToolbarItem.Icon>
+                        <OnPlatform x:TypeArguments="FileImageSource">
+                            <OnPlatform.WinPhone>/Toolkit.Content/ApplicationBar.Add.png</OnPlatform.WinPhone>
+                        </OnPlatform>
+                    </ToolbarItem.Icon>
+                </ToolbarItem>
+            </ContentPage.ToolbarItems>
+            <StackLayout Orientation="Vertical" VerticalOptions="Start">
+                <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}" HorizontalOptions="CenterAndExpand" />
+
+                <ListView ItemsSource="{Binding BillItems}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" >
+                                            <Label Text="{Binding Name}" Font="Medium" />
+                                            <Label Text="Added By Matt King" />
+                                        </StackLayout>
+                                        <StackLayout Orientation="Vertical" WidthRequest="150" HorizontalOptions="End" >
+                                            <Label Text="{Binding Cost, StringFormat='{0:c}'}" />
+                                            <!--<Label Text="{Binding CurrentBid, StringFormat='Current: {0:c}'}" />-->
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <TableView Intent="Form">
+                    <TableView.Root>
+                        <TableRoot>
+                            <TableSection>
+                                <TextCell Text="Total:" Detail="{Binding MyTotal, StringFormat='{0:c}'}"></TextCell>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView.Root>
+                </TableView>
+                
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>
